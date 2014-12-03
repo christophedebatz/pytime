@@ -1,7 +1,7 @@
 Pytime
 ======
 
-A simple Python timetable planner. In console mode, it allow create and manage a tast timetable and it create some stats.
+A simple Python timetable planner. In console mode, it allow create and manage a tast timetable and it create some stats. Coloration works only under Unix systems.
 
 Usage
 ======
