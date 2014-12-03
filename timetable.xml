@@ -1,0 +1,146 @@
+<work>
+	<days>
+		<day date="15/09/2014">
+			<periods>
+				<period type="MORNING">
+					<task tags="ARCHI">Complétion de la rédaction des outputs (error ou success, avec exemples) dans le document référentiel de Xtophe</task>
+					<task tags="ARCHI">Définition de l'ordre d'exécution des tâches ainsi que description du type de travail à fournir dans les tâches données (doc Management\NeedsSupport)</task>
+					<task tags="ARCHI">Commencement de l'étude sur l'architecture de l'application AWS (services, bundle as service, FOSRest, FOSUser, CustomUserProvider...)</task>
+				</period>
+				<period type="AFTERNOON">
+					<task tags="ARCHI">Etude sur l'architecture d'AWS (passage de configuration selon le projet host via création d'une extension)</task>
+					<task tags="ARCHI">Premier dessin d'après les analyses de la journée (figure 1)</task>
+				</period>
+				<period type="NIGHT">
+					<task tags="DEVTOOLS">Elaboration du timetable Python + XML</task>
+				</period>
+			</periods>
+		</day>
+		<day date="16/09/2014">
+			<periods>
+				<period type="MORNING">
+					<task tags="RESEARCH">Etude de l'authentification par token du bundle WS; rapprochement avec l'équipe de Shapr pour discussion</task>
+					<task tags="RESEARCH">Dessin et compréhension de la méthode d'authentification de Shapr : Simple PreAuth (figure 2)</task>
+					<task tags="RESEARCH+ARCHI">Comparaison des deux méthodes (WSSE et Simple PreAuth) en vue d'un choix technique et d'une présentation (+ proposition)</task>	
+            			</period>
+				<period type="AFTERNOON">
+					<task tags="RESEARCH+ARCHI">Comparaison des UserProvider possibles (bundle ou homemade) (+ proposition)</task>
+                                        <task tags="RESEARCH+ARCHI">Comparaison des moyens de mettre en place une architecture REST (bundles ou homemade) (+ proposition)</task>
+                                        <task tags="RESEARCH+ARCHI">Mise à plat des idées concernant le traitement des erreurs au sein de Symfony 2 (+ proposition)</task>
+                                        <task tags="RESEARCH+ARCHI">Comparaison annotations versus configuration (+ proposition)</task>
+                                        <task tags="RESEARCH">Recherche de pistes d'améliorations pour le Simple PreAuth</task>
+					<task tags="ARCHI">Analyse des tables de la base de données existantes</task>
+					<task tags="ARCHI+REDAC">Récapitulatif écrit et doc sur l'organisation des projets Aw (Ws + Business) et Responsive</task>
+				</period>
+			</periods>
+		</day>
+		<day date="17/09/2014">
+			<periods>
+				<period type="MORNING">
+					<task tags="CONFIG">Passage VM IP fixe + correction bug dans /etc/host (rapprochement avec Cyril à ce propos)</task>
+					<task tags="CONFIG">Mise en place (deuxième tentative) de XDebug en remote (d'après le tuto de Cyril)</task>
+				</period>
+				<period type="AFTERNOON">
+					<task tags="CONFIG">Poursuite de XDebug (grosse galère, to be continued...)</task>
+					<task tags="DEV+TESTS">Tests de charge et de vélocité sur JMSSerializerBundle et sur le Serializer de Symfony (XML + JSON)</task>
+                                        <task tags="DEV">Affichage des résultats sur UI</task>
+				</period>
+			</periods>
+		</day>
+		<day date="18/09/2014">
+			<periods>
+				<period type="MORNING">
+					<task tags="DEV">Réécriture totale de la classe de test de charge des serializers suite à une perte de données dans la nuit (vive Git !)</task>
+				</period>	
+				<period type="AFTERNOON">
+					<task tags="TEST">Test des serializers et capture des résultats. Recommandation : utiliser le serializer natif à Symfony</task>
+					<task tags="CONFIG">Problème avec la VM : des fichiers sont "vidés", pas que les tests faient précédemment... Re-création d'un projet Symfony de test.</task>
+                                        <task tags="CONFIG+DEV">Création d'un UserProvider personnalisé</task>
+                                </period>
+			</periods>
+		</day>
+		<day date="19/09/2014">
+			<periods>
+				<period type="MORNING">
+					<task tags="DEV">Correction du serializer benchmark et ajout d'un chart pour visualiser les résultats. Prise de screenshots</task>
+					<task tags="CONFIG+DEV">Création d'un User Authenticater (pour Simple PreAuth)</task>
+					<task tags="DEV">Création d'un PasswordEncoder pour les utilisateurs</task>
+				</period>
+				<period type="AFTERNOON">
+					<task tags="DEV">Rapprochement avec Shapr pour des infos (notamment la faisabilité des filtres de project, à voir...)</task>
+					<task tags="CONFIG+DEV">Création d'un service de session handler basé sur Memcache dans Symfony</task>
+					<task tags="RESEARCH">Lecture de doc sur Symfony (notamment sur l'injection de dépendances via les fichiers Yml)</task>
+					<task tags="DEV">Poursuite du développement de l'authentification par Simple PreAuth (User provider + Token authenticator + Password encoder + config, security and services)</task>
+				</period>
+			</periods>
+		</day>
+		<day date="22/09/2014">
+			<periods>
+				<period type="MORNING">
+					<task tags="CONFIG+DEV">Poursuite et debug de l'authentification par Simple PreAuth</task>
+					<task tags="CONFIG">Mise en oeuvre de Git (création des credentials et pull d'un projet). Reste à créer les véritables repo (pas de droits pour ca)</task>
+				</period>
+				<period type="AFTERNOON">
+					<task tags="DEV">Création d'une commande de création d'utilisateur dans la console Symfony</task>
+					<task tags="DEV">Correction d'un bug quant à la mise en place auto de la base de données depuis les entités Sf</task>
+					<task tags="DEV">Création de wrappers de réponses Json/XML</task>
+				</period>
+			</periods>
+		</day>
+		<day date="23/09/2014">
+			<periods>
+				<period type="MORNING">
+					<task tags="DEV">Création de builders pour les wrappers de réponses (success et error, basées sur l'objet JsonResponse de Symfony)</task>
+				</period>
+				<period type="AFTERNOON">
+					<task tags="ARCHI">Reflection sur la structure des bundles, pas encore d'idée précise : il faudra en reparler</task>
+					<task tags="ARCHI">Complétion du document Word d'architecture (plusieurs sujets: screens du benchmark des serializers,  wrappers/templates, builders, exceptions, processus de login par Token ID, log...)</task>
+					<task tags="DEV">Mise en place d'un système de levée d'exception globale pour gérer les exceptions levée par le Kernel ou des sous process par exemple</task>
+					<task tags="CONFIG">Création d'un nouveau projet Symfony de test pour WSSE en vue de la présentation à Xtophe</task>
+				</period>
+			</periods>
+		</day>
+		<day date="24/09/2014">
+			<periods>
+				<period type="MORNING">
+					<task tags="DEV+CONFIG">Paramétrage du projet de test avec WSSE (user provider + authentication classes)</task>
+				</period>
+				<period type="AFTERNOON">
+					<task tags="DEV">Mise en place de la sécurité WSSE sur le nouveau projet</task>
+					<task tags="RESEARCH">Compréhension du mécanisme d'authentification WSSE, côté client</task>
+					<task tags="RESEARCH">Complétion de la documentation Word avec un schéma technique de WSSE auth method</task>
+					<task tags="ARCHI">Architecture et proposition de solutions concernant le filtrage (projection) des champs des entités</task>
+					<task tags="DEV">Début de la création d'un client simple pour tester la méthode WSSE</task>
+				</period>
+			</periods>
+		</day>
+		<day date="25/09/2014">
+			<periods>
+				<period type="MORNING">
+					<task tags="DEV+CONFIG">Mise en place du client de test pour l'authentification WSSE</task>
+				</period>
+				<period type="AFTERNOON">
+					<task tags="RESEARCH+DEV+CONFIG">Recherches sur WSSE et l'encryptage des passwords en base avec Symfony (décortiquage de FOSUserBundle)</task>
+					<task tags="DEV">Terminaison du client de test + découverte que les web-services seront utilisés depuis PHP (Aw Responsive Sf) ou depuis un client mobile ce qui rend le WSSE beaucoup plus intéressant</task>
+				</period>
+			</periods>
+		</day>
+		<day date="26/09/2014">
+			<periods>
+				<period type="MORNING">
+					<task tags="RECOVERING">Récupération d'un fichier Twig perdu pendant la nuit (...)</task>
+					<task tags="DEV">Découverte des tests avec PHPUnit et WebTestCase by Sensio : écriture d'un premier test pour WSSE</task>
+					<task tags="MISC">Mise en page des pages de test à montrer à Xtophe lundi</task>
+					<task tags="ARCHI">Proposition de regroupement des bundles aux sein du projet AwDataBusinessService</task>
+				</period>
+				<period type="AFTERNOON">
+					<task tags="ARCHI">Analyse des couches de données/métiers envisageables pour Ws (voir figure 3.)</task>
+					<task tags="DEV">Poursuite de la découverte des tests unitaire dans Symfony</task>
+					<task tags="RESEARCH">Analyse du périmètre des modules et des bundles</task>
+					<task tags="RESEARCH">Renseignement sur l'internationalisation et sur le lazy loading de services</task>
+					<task tags="MISC">Classement des documents à montrer à Xtophe lundi (40mn, tout de même !)</task>
+				</period>
+			</periods>
+		</day>
+	</days>
+</work>
